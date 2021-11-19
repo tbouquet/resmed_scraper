@@ -18,13 +18,15 @@ from get_otp_code import get_otp_code
 urllib3.disable_warnings()
 
 serialize = False
+#You can get the country code from https://myair.resmed.com/CountrySelection.aspx?redirectPage=0
+country_code = '24' #France 
 
 config = None
 with open('config.json') as fh:
     config = json.loads(fh.read())
 
 
-url_resmed = 'https://myair.resmed.eu/Default.aspx?redirectCountry=24'
+url_resmed = 'https://myair.resmed.eu/Default.aspx?redirectCountry='+country_code
 
 
 def get_page_soup():
