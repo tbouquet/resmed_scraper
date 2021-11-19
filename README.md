@@ -5,15 +5,16 @@ This is a school project
 
 I always wanted to be able to get all the sleep data from my Resmed account.
 
-THe steps are :
+The steps are :
 
 - Auth to the resmed website using selenium
 - Fetch the OTP code sent via email to my gmail account and use it
 - Get all the datas from the History.apx page
 
+The output is a pandas Datastore containing the yearly sleep datas
 
 
-Thanks to [handyman5](https://github.com/handyman5/resmed-scraper) 
+Thanks to [handyman5](https://github.com/handyman5/resmed-scraper) for the insparation
 
 
 
