@@ -17,7 +17,7 @@ from get_otp_code import get_otp_code
 
 urllib3.disable_warnings()
 
-serialize = True
+serialize = False
 
 config = None
 with open('config.json') as fh:
