@@ -40,7 +40,7 @@ def get_page_soup():
     driver = webdriver.Chrome(service=s, options=options)
 
     # Connect to Resmed website, type in fields and submit
-    print('Connecting to Resmed french website : ', url_resmed)
+    print('Connecting to Resmed website : ', url_resmed)
     driver.get(url_resmed)
     driver.find_element(By.NAME,
                         'ctl00$ctl00$PageContent$MainPageContent$textBoxEmailAddress').send_keys(config['rs_email'])
@@ -51,6 +51,7 @@ def get_page_soup():
 
     # Sleep 5 second to receive the OTP email on gmail
     time.sleep(5)
+    # if driver.find_element(By.CLASS_NAME,'c-alert--small'): print('Too many auth error please wait')
 
     # GEt the the OTP password and submit
 
@@ -61,7 +62,7 @@ def get_page_soup():
                         'ctl00_ctl00_PageContent_MainPageContent_buttonCheckOtp').click()
 
     # Sleep to have time to switch page
-    time.sleep(2)
+    time.sleep(5)
 
     # Get the url session aprameter => u=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     session = driver.current_url.split('?')[1]
@@ -96,3 +97,4 @@ if __name__ == '__main__':
         DF = DF.append(pd.DataFrame(month_score))
     DF[['DayNumber', 'Score', 'UsageScore', 'MaskScore', 'EventsScore']] = DF[[
         'DayNumber', 'Score', 'UsageScore', 'MaskScore', 'EventsScore']].astype(int)
+    print(DF.to_csv)
