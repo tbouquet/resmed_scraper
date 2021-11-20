@@ -8,7 +8,7 @@ The steps are :
 
 - Auth to the resmed website using selenium
 - Fetch the OTP code sent via email to my gmail account and use it
-- Get all the datas from the History.apx page
+- Get all yearly datas from the History.aspx page
 
 The output is a pandas Dataframe containing the yearly sleep datas
 
