@@ -23,3 +23,10 @@ Thanks to [handyman5](https://github.com/handyman5/resmed-scraper) for the inspi
 ## Configuration
 
 Edit the config.json to put your resmed and gmail credentials
+
+
+## Usage
+
+```python
+python3 scrape.py
+```
